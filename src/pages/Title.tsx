@@ -68,7 +68,7 @@ const Title = () => {
           </div>
         ) : (
           title ? (
-            <div className="flex flex-col sm:flex-row gap-4 mt-2 p-2 bg-gray-200 border-2 border-purple-800 rounded-2xl shadow-2xl shadow-orange-500">
+            <div className="flex flex-col sm:flex-row gap-4 mt-4 p-2 bg-gray-200 border-2 border-purple-800 rounded-2xl shadow-2xl shadow-orange-500">
               <div className="w-72 md:w-80 lg:w-md">
                 <img
                   src={title.Poster}
