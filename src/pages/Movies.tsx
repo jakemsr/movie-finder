@@ -92,8 +92,13 @@ const Movies = () => {
         </div>
       ) : (
         <>
-          <div className="text-center px-5 py-2">
-            Found {totalResults} movies. Showing 10 movies per page.
+          <div className="flex flex-col items-center sm:flex-row gap-1 justify-center px-5 py-2">
+            <div>
+              Found {totalResults} movies.
+            </div>
+            <div>
+              Showing 10 movies per page.
+            </div>
           </div>
           <div className="flex justify-between justify-self-center items-center w-full max-w-4/5">
             <div>
