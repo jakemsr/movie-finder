@@ -16,15 +16,15 @@ const Home = () => {
 
   return (
     <>
-      <div className="text-2xl sm:text-4xl lg:text-5xl font-bold mt-5 text-center">
+      <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-5 px-2 text-center">
         Explore Your Passion for Cinema With
-        <div className="font-extrabold font-bebas italic text-4xl sm:text-6xl lg:text-7xl mt-7">
-          <span className="text-purple-800"><span className="text-5xl sm:text-7xl lg:text-8xl">M</span>ovie</span>
+        <div className="font-extrabold font-bebas italic text-6xl sm:text-7xl lg:text-8xl mt-7">
+          <span className="text-purple-800"><span className="text-7xl sm:text-8xl lg:text-9xl">M</span>ovie</span>
           &nbsp;
-          <span className="text-orange-500"><span className="text-5xl sm:text-7xl lg:text-8xl">F</span>inder</span>
+          <span className="text-orange-500"><span className="text-7xl sm:text-8xl lg:text-9xl">F</span>inder</span>
         </div>
       </div>
-      <div id="search" className="flex justify-center gap-4 mt-7">
+      <div id="search" className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-7">
         <input
           type="text"
           name="searchText"
