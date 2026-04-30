@@ -69,7 +69,7 @@ const Title = () => {
         ) : (
           title ? (
             <div className="flex flex-col sm:flex-row gap-4 mt-2 p-2 bg-gray-200 border-2 border-purple-800 rounded-2xl shadow-2xl shadow-orange-500">
-              <div className="w-64 md:w-80 lg:w-96">
+              <div className="w-72 md:w-80 lg:w-md">
                 <img
                   src={title.Poster}
                   className="w-full"
@@ -79,7 +79,7 @@ const Title = () => {
                   }}
                   alt="" />
               </div>
-              <div className="flex flex-col w-64 md:w-80 lg:w-96 gap-2">
+              <div className="flex flex-col w-72 md:w-80 lg:w-md gap-2">
                 <div>
                   <span className="font-bold">
                     Title:<br />
