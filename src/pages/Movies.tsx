@@ -127,7 +127,7 @@ const Movies = () => {
               {movies.map((movie, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center w-40 md:w-52 p-2 m-2 bg-gray-200 border-2 border-purple-800 rounded-2xl shadow-2xl shadow-orange-500 hover:cursor-pointer"
+                  className="flex flex-col items-center w-52 p-2 m-2 bg-gray-200 border-2 border-purple-800 rounded-2xl shadow-2xl shadow-orange-500 hover:cursor-pointer"
                   onClick={() => navigate(`/title/${movie.imdbID}`)}
                 >
                   <img
