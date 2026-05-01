@@ -70,11 +70,11 @@ const Movies = () => {
   }
 
   const nextPage = () => {
-    navigate(`/movies/${cleanSearchText}/${pageNum + 1}`)
+    navigate(`/movies/${cleanSearchText}/${pageNum + 1}`);
   }
 
   const prevPage = () => {
-    navigate(`/movies/${cleanSearchText}/${pageNum - 1}`)
+    navigate(`/movies/${cleanSearchText}/${pageNum - 1}`);
   }
 
   useEffect(() => {
@@ -92,67 +92,83 @@ const Movies = () => {
         </div>
       ) : (
         <>
-          <div className="flex flex-col items-center sm:flex-row gap-1 justify-center px-5 py-2">
-            <div>
-              Found {totalResults} movies.
+          {totalResults === 0 || !movies ? (
+            <div className="flex flex-col items-center gap-1 justify-center px-5 py-2">
+              <div className="text-4xl font-bold m-8 text-center">
+                Could not find any movies with the {wordList()} in the title!
+              </div>
+              <button
+                className="text-nowrap bg-purple-800 rounded-full px-6 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300"
+                onClick={() => navigate(-1)}
+              >
+                &lt;- Go back to search
+              </button>
             </div>
-            <div>
-              Showing 10 movies per page.
-            </div>
-          </div>
-          <div className="flex justify-between justify-self-center items-center w-full max-w-4/5">
-            <div>
-              {pageNum > 1 ? (
-                <button
-                  onClick={prevPage}
-                  className="text-nowrap bg-purple-800 rounded-full px-6 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300">
-                  &lt;- prev page
-                </button>
-              ) : (
-                <button className="text-nowrap text-white">hidden for spacing</button>
-              )}
-            </div>
-            <div className="text-center">
-              Page {pageNum}
-            </div>
-            <div>
-              {pageNum * 10 < totalResults ? (
-                <button
-                  onClick={nextPage}
-                  className="text-nowrap bg-purple-800 rounded-full px-6 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300">
-                  next page -&gt;
-                </button>
-              ) : (
-                <button className="text-nowrap text-white">hidden for spacing</button>
-              )}
-            </div>
-          </div>
-          <div className="flex justify-center w-full mt-6">
-            <div className="flex flex-wrap justify-around max-w-4/5">
-              {movies.map((movie, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center w-52 p-2 m-2 bg-gray-200 border-2 border-purple-800 rounded-2xl shadow-2xl shadow-orange-500 hover:cursor-pointer"
-                  onClick={() => navigate(`/title/${movie.imdbID}`)}
-                >
-                  <img
-                    src={movie.Poster}
-                    alt=""
-                    onError={(e) => {
-                      e.currentTarget.src = '/no_img.svg';
-                      e.currentTarget.onerror = null;
-                    }}
-                    className="w-full"
-                  />
-                  <div className="text-center mt-2">
-                    {movie.Title}
-                    <br />
-                    {movie.Year}
-                  </div>
+          ) : (
+            <>
+              <div className="flex flex-col items-center sm:flex-row gap-1 justify-center px-5 py-2">
+                <div>
+                  Found {totalResults} movies.
                 </div>
-              ))}
-            </div>
-          </div>
+                <div>
+                  Showing 10 movies per page.
+                </div>
+              </div>
+              <div className="flex justify-between justify-self-center items-center w-full max-w-4/5">
+                <div>
+                  {pageNum > 1 ? (
+                    <button
+                      onClick={prevPage}
+                      className="text-nowrap bg-purple-800 rounded-full px-6 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300">
+                      &lt;- prev page
+                    </button>
+                  ) : (
+                    <button className="text-nowrap text-white">hidden for spacing</button>
+                  )}
+                </div>
+                <div className="text-center">
+                  Page {pageNum}
+                </div>
+                <div>
+                  {pageNum * 10 < totalResults ? (
+                    <button
+                      onClick={nextPage}
+                      className="text-nowrap bg-purple-800 rounded-full px-6 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300">
+                      next page -&gt;
+                    </button>
+                  ) : (
+                    <button className="text-nowrap text-white">hidden for spacing</button>
+                  )}
+                </div>
+              </div>
+              <div className="flex justify-center w-full mt-6">
+                <div className="flex flex-wrap justify-around max-w-4/5">
+                  {movies.map((movie, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col items-center w-52 p-2 m-2 bg-gray-200 border-2 border-purple-800 rounded-2xl shadow-2xl shadow-orange-500 hover:cursor-pointer"
+                      onClick={() => navigate(`/title/${movie.imdbID}`)}
+                    >
+                      <img
+                        src={movie.Poster}
+                        alt=""
+                        onError={(e) => {
+                          e.currentTarget.src = '/no_img.svg';
+                          e.currentTarget.onerror = null;
+                        }}
+                        className="w-full"
+                      />
+                      <div className="text-center mt-2">
+                        {movie.Title}
+                        <br />
+                        {movie.Year}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
         </>
       )}
     </div>
