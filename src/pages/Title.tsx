@@ -56,12 +56,12 @@ const Title = () => {
   return (
     <>
       <div className="justify-self-center w-full px-10 sm:max-w-4/5">
-      <button
-        className="px-6 py-2 rounded-full bg-purple-800 text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-250"
-        onClick={() => navigate(-1)}
-      >
-        &lt;- Back to Movies
-      </button>
+        <button
+          className="px-6 py-2 rounded-full bg-purple-800 text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-250"
+          onClick={() => navigate(-1)}
+        >
+          &lt;- Back to Movies
+        </button>
       </div>
       <div className="flex justify-center w-full ">
         {loadingTitle ? (
