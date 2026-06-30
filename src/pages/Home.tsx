@@ -42,7 +42,7 @@ const Home = () => {
         </button>
       </div>
       <img
-        src="/film-strips.png"
+        src="https://res.cloudinary.com/dfh81vhxi/image/upload/f_webp/q_auto:best/cs_tinysrgb/dpr_auto/film-strips_ou4kft.png"
         alt="Film strips in the background"
         className="z-[-1] max-w-4/5 justify-self-center mt-4" />
     </>
