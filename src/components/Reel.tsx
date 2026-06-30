@@ -2,7 +2,7 @@ const Reel = () => {
   return (
     <div>
       <svg
-        className="w-32 h-32 animate-spin origin-center"
+        className="w-32 h-32 animate-[spin_3s_linear_infinite] origin-center"
         viewBox="0 0 150 150"
       >
         <g fill="#000">
