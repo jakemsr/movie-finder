@@ -8,7 +8,7 @@ const Navbar = () => {
       </Link>
       <div className="flex gap-2 sm:gap-4">
         <Link to="/">Home</Link>
-        <div className="bg-purple-800 rounded-full px-6 py-1 text-sm text-white hover:scale-105 active:scale-95 transition duration-300">
+        <div className="bg-purple-800 rounded-full px-3 py-1 text-sm text-white hover:scale-105 active:scale-95 transition duration-300">
           <a href="mailto:jakemsr@yahoo.com">Contact</a>
         </div>
       </div>

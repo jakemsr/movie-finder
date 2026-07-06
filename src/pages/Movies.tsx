@@ -119,7 +119,7 @@ const Movies = () => {
                   {pageNum > 1 ? (
                     <button
                       onClick={prevPage}
-                      className="text-nowrap bg-purple-800 rounded-full px-6 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300">
+                      className="text-nowrap bg-purple-800 rounded-full px-3 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300">
                       &lt;- prev page
                     </button>
                   ) : (
@@ -133,7 +133,7 @@ const Movies = () => {
                   {pageNum * 10 < totalResults ? (
                     <button
                       onClick={nextPage}
-                      className="text-nowrap bg-purple-800 rounded-full px-6 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300">
+                      className="text-nowrap bg-purple-800 rounded-full px-3 py-1 text-sm text-white hover:cursor-pointer hover:scale-105 active:scale-95 transition duration-300">
                       next page -&gt;
                     </button>
                   ) : (
