@@ -17,4 +17,3 @@ The purpose of this project was to practice using React Router and fetching data
 * User selected sorting of results
 * Fetching data from remote APIs
 * Pagination of results
-* 
